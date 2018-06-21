@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\logserver\logserver.h" />
+    <ClInclude Include="src\lol\lol_hash.h" />
+    <ClInclude Include="src\routeserver\routeserver.h" />
+    <ClInclude Include="src\lol\lol.h" />
+    <ClInclude Include="src\lol\lol_cfg.h" />
+    <ClInclude Include="src\lol\lol_conf.h" />
+    <ClInclude Include="src\lol\lol_db.h" />
+    <ClInclude Include="src\lol\lol_error.h" />
+    <ClInclude Include="src\lol\lol_file.h" />
+    <ClInclude Include="src\lol\lol_gl.h" />
+    <ClInclude Include="src\lol\lol_log.h" />
+    <ClInclude Include="src\lol\lol_mdb.h" />
+    <ClInclude Include="src\lol\lol_mutex.h" />
+    <ClInclude Include="src\lol\lol_net.h" />
+    <ClInclude Include="src\lol\lol_netcenter.h" />
+    <ClInclude Include="src\lol\lol_os.h" />
+    <ClInclude Include="src\lol\lol_route.h" />
+    <ClInclude Include="src\lol\lol_sem.h" />
+    <ClInclude Include="src\lol\lol_shm.h" />
+    <ClInclude Include="src\lol\lol_shmq.h" />
+    <ClInclude Include="src\lol\lol_thread.h" />
+    <ClInclude Include="src\lol\lol_threadmutex.h" />
+    <ClInclude Include="src\lol\lol_timer.h" />
+    <ClInclude Include="src\lol\lol_utility.h" />
+    <ClInclude Include="src\lol_dbf\lol_dbf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\examples\threadtest.c" />
+    <ClCompile Include="src\logserver\logserver.c" />
+    <ClCompile Include="src\lol\lol_hash.c" />
+    <ClCompile Include="src\routeserver\routeserver.c" />
+    <ClCompile Include="src\lol\lol_cfg.c" />
+    <ClCompile Include="src\lol\lol_conf.c" />
+    <ClCompile Include="src\lol\lol_db.c" />
+    <ClCompile Include="src\lol\lol_error.c" />
+    <ClCompile Include="src\lol\lol_file.c" />
+    <ClCompile Include="src\lol\lol_gl.c" />
+    <ClCompile Include="src\lol\lol_log.c" />
+    <ClCompile Include="src\lol\lol_mdb.c" />
+    <ClCompile Include="src\lol\lol_mutex.c" />
+    <ClCompile Include="src\lol\lol_net.c" />
+    <ClCompile Include="src\lol\lol_netcenter.c" />
+    <ClCompile Include="src\lol\lol_os.c" />
+    <ClCompile Include="src\lol\lol_route.c" />
+    <ClCompile Include="src\lol\lol_sem.c" />
+    <ClCompile Include="src\lol\lol_shm.c" />
+    <ClCompile Include="src\lol\lol_shmq.c" />
+    <ClCompile Include="src\lol\lol_thread.c" />
+    <ClCompile Include="src\lol\lol_threadmutex.c" />
+    <ClCompile Include="src\lol\lol_timer.c" />
+    <ClCompile Include="src\lol\lol_utility.c" />
+    <ClCompile Include="src\lol_dbf\lol_dbf.c" />
+    <ClCompile Include="src\tools\dbcreate.c" />
+    <ClCompile Include="src\tools\dbfcreate.c" />
+    <ClCompile Include="src\tools\dbfinsert.c" />
+    <ClCompile Include="src\tools\dbfload.c" />
+    <ClCompile Include="src\tools\dbfshow.c" />
+    <ClCompile Include="src\tools\dbfstat.c" />
+    <ClCompile Include="src\tools\dbinsert.c" />
+    <ClCompile Include="src\tools\dbload.c" />
+    <ClCompile Include="src\tools\dbshow.c" />
+    <ClCompile Include="src\tools\dbstat.c" />
+    <ClCompile Include="src\tools\getcfg.c" />
+    <ClCompile Include="src\tools\getconf.c" />
+    <ClCompile Include="src\tools\handtest.c" />
+    <ClCompile Include="src\tools\logsend.c" />
+    <ClCompile Include="src\tools\logview.c" />
+    <ClCompile Include="src\tools\shmqcreate.c" />
+    <ClCompile Include="src\tools\shmqget.c" />
+    <ClCompile Include="src\tools\shmqput.c" />
+    <ClCompile Include="src\tools\shmqrm.c" />
+    <ClCompile Include="src\tools\shmqstat.c" />
+    <ClCompile Include="src\tools\showcfg.c" />
+    <ClCompile Include="src\tools\showconf.c" />
+    <ClCompile Include="src\tools\showerr.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="etc\logserver.cfg" />
+    <None Include="etc\routeserver.cfg" />
+    <None Include="src\examples\Makefile" />
+    <None Include="src\examples\win32\build.bat" />
+    <None Include="src\examples\win32\buildclean.bat" />
+    <None Include="src\logserver\Makefile" />
+    <None Include="src\logserver\win32\build.bat" />
+    <None Include="src\logserver\win32\buildclean.bat" />
+    <None Include="src\Makefile" />
+    <None Include="src\routeserver\Makefile" />
+    <None Include="src\lol\Makefile" />
+    <None Include="src\lol\win32\build.bat" />
+    <None Include="src\lol\win32\buildclean.bat" />
+    <None Include="src\lol_dbf\Makefile" />
+    <None Include="src\lol_dbf\win32\build.bat" />
+    <None Include="src\lol_dbf\win32\buildclean.bat" />
+    <None Include="src\tools\kill.sh" />
+    <None Include="src\tools\Makefile" />
+    <None Include="src\tools\win32\build.bat" />
+    <None Include="src\tools\win32\buildclean.bat" />
+    <None Include="src\tools\wtou.sh" />
+    <None Include="src\win32\build.bat" />
+    <None Include="src\win32\buildclean.bat" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{03D53F06-C83C-400B-99A1-04B2C066BCDF}</ProjectGuid>
+    <RootNamespace>lol</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src/lol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src/lol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src/lol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src/lol;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

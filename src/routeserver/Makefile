@@ -1,0 +1,18 @@
+INSTALL_PATH=../..
+CC=cc
+CFLAGS=-g -I$(INSTALL_PATH)/include
+LDFLAGS=-L$(INSTALL_PATH)/lib
+LDLIBS=-llol# -lpthread -lsocket -lnsl -lresolv -lrt
+AR=
+ARFLAGS=
+INCLUDES=
+LIBS=
+APPS=routeserver
+all:$(APPS)
+routeserver:routeserver.o
+	$(CC) $(LDFLAGS) -o $@ $? $(LDLIBS)
+clean:
+	rm -f ? *.o *core *~
+	rm -f $(APPS)
+install:
+	cp -f $(APPS) $(INSTALL_PATH)/bin
