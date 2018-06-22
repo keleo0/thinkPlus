@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_gl.h: LOL General Language Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-07	1.0 released
  *
@@ -18,26 +17,26 @@ extern "C" {
 #endif
 
 #define LOL_GL_CHAR		'C'		/* 1 bytes */
-#define LOL_GL_SHORT		'S'		/* 2 bytes */
+#define LOL_GL_SHORT	'S'		/* 2 bytes */
 #define LOL_GL_INT		'I'		/* 4 bytes */
 #define LOL_GL_LONG		'L'		/* 8 bytes */
-#define LOL_GL_FLOAT		'F'		/* 4 bytes */
-#define LOL_GL_DOUBLE		'D'		/* 8 bytes */
+#define LOL_GL_FLOAT	'F'		/* 4 bytes */
+#define LOL_GL_DOUBLE	'D'		/* 8 bytes */
 
 /* rule */
 typedef struct {
-	unsigned int no;	/* no */
-	char name[32];		/* name */
-	char sname[16];		/* short name */
-	char type;		/* type */
+	unsigned int no;		/* no */
+	char name[32];			/* name */
+	char sname[16];			/* short name */
+	char type;				/* type */
 	unsigned int maxlen;	/* max length */
-	char note[128];		/* note */
+	char note[128];			/* note */
 } LOL_GL_RULE;
 
 /* field */
 typedef struct {
 	unsigned int no;	/* field no */
-	void *data;		/* data address */
+	void *data;			/* data address */
 	unsigned int size;	/* data size */
 	unsigned int *len;	/* data length */
 } LOL_GL_FIELD;

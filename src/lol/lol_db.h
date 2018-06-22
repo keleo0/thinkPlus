@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_db.h: LOL DB Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-07	1.0 released
  *
@@ -35,10 +34,10 @@ extern "C" {
 #define LOL_DB_SEEK_END	2		/* from last record */
 
 /* field type */
-#define LOL_DB_CHAR		'C'		/* 1 bytes */
+#define LOL_DB_CHAR			'C'		/* 1 bytes */
 #define LOL_DB_SHORT		'S'		/* 2 bytes */
-#define LOL_DB_INT		'I'		/* 4 bytes */
-#define LOL_DB_LONG		'L'		/* 8 bytes */
+#define LOL_DB_INT			'I'		/* 4 bytes */
+#define LOL_DB_LONG			'L'		/* 8 bytes */
 #define LOL_DB_FLOAT		'F'		/* 4 bytes */
 #define LOL_DB_DOUBLE		'D'		/* 8 bytes */
 #define LOL_DB_MASK_TYPE	0xFF		/* field type mask */
@@ -50,10 +49,10 @@ extern "C" {
 
 /* db field */
 struct __lol_db_field {
-	char name[11];				/* field name */
+	char name[11];			/* field name */
 	char type;				/* field type */
-	unsigned int length;			/* field length */
-	unsigned int offset;			/* field offset */
+	unsigned int length;	/* field length */
+	unsigned int offset;	/* field offset */
 };
 typedef struct __lol_db_field LOL_DB_FIELD;
 
@@ -62,7 +61,7 @@ struct __lol_db {
 	LOL_FILE *file;			/* db file */
 	int flags;				/* open flags */
 	int cursor;				/* cursor */
-	char *buffer;				/* buffer */
+	char *buffer;			/* buffer */
 
 	char last_modify_date[11];		/* last modify date: yyyy-mm-dd */
 	unsigned int record_count;		/* record count */

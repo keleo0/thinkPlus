@@ -1,4 +1,4 @@
-#include "lol_error.h"
+﻿#include "lol_error.h"
 #include "lol_utility.h"
 #include "lol_conf.h"
 #include "lol_db.h"
@@ -114,7 +114,7 @@ LOL_DB *lol_db_open(const char *pathname,int flags,LOL_DB_FIELD *fieldarray,unsi
 	/* creat & excl & trunc */
 	db_create=0;	/* file create or not */
 	if(flags & LOL_DB_CREAT){
-		if(access(pathname,F_OK)==0){
+		if(lolaccess(pathname,F_OK)==0){
 			if(flags & LOL_DB_EXCL){
 				lol_error(0,"[%s]:file exists.",__func__);
 				free(db);
@@ -324,7 +324,7 @@ LOL_DB *lol_db_openx(const char *pathname,int flags,const char *conffile)
 	/* creat & excl & trunc */
 	db_create=0;	/* file create or not */
 	if(flags & LOL_DB_CREAT){
-		if(access(pathname,F_OK)==0){
+		if(lolaccess(pathname,F_OK)==0){
 			if(flags & LOL_DB_EXCL){
 				lol_error(0,"[%s]:file exists.",__func__);
 				return NULL;

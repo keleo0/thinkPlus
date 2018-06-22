@@ -58,7 +58,7 @@ int __lol_loadcfg(LOL_CFG *cfg,const char *file,const char *path)
 				snprintf(cfgfile,sizeof(cfgfile),"%s",file);
 			}
 
-			if(access(cfgfile,F_OK)<0){
+			if(lolaccess(cfgfile,F_OK)<0){
 				continue;
 			}
 			if((fp=fopen(cfgfile,"r"))==NULL){

@@ -1,4 +1,4 @@
-#include "lol_dbf.h"
+﻿#include "lol_dbf.h"
 
 /* lol_dbf_open */
 LOL_DBF *lol_dbf_open(const char *pathname,int flags,const char *conffile);
@@ -148,7 +148,7 @@ LOL_DBF *lol_dbf_open(const char *pathname,int flags,const char *conffile)
 	/* creat & excl & trunc */
 	dbf_create=0;	/* file create or not */
 	if(flags & LOL_DBF_CREAT){
-		if(access(pathname,F_OK)==0){
+		if(lolaccess(pathname,F_OK)==0){
 			if(flags & LOL_DBF_EXCL){
 				lol_error(0,"[%s]:file exists.",__func__);
 				free(dbf);

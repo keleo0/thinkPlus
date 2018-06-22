@@ -1,5 +1,7 @@
-#ifndef __LOL_HASH_H__
+﻿#ifndef __LOL_HASH_H__
 #define __LOL_HASH_H__
+
+#include "lol_os.h"
 
 #ifdef    __cplusplus
 extern "C" {

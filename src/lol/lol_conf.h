@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_conf.h: LOL Conf Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-14	1.0 released
  *
@@ -35,11 +34,11 @@ extern "C" {
 
 /* field type */
 #define LOL_CONF_CHAR		'C'		/* 1 bytes */
-#define LOL_CONF_SHORT	'S'		/* 2 bytes */
+#define LOL_CONF_SHORT		'S'		/* 2 bytes */
 #define LOL_CONF_INT		'I'		/* 4 bytes */
 #define LOL_CONF_LONG		'L'		/* 8 bytes */
-#define LOL_CONF_FLOAT	'F'		/* 4 bytes */
-#define LOL_CONF_DOUBLE	'D'		/* 8 bytes */
+#define LOL_CONF_FLOAT		'F'		/* 4 bytes */
+#define LOL_CONF_DOUBLE		'D'		/* 8 bytes */
 #define LOL_CONF_MASK_TYPE	0xFF		/* field type mask */
 
 #define LOL_CONF_NOT_EMPTY	0x0100		/* field value not empty */

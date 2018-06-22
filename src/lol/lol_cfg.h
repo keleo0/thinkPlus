@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_cfg.h: LOL Cfg Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-14	1.0 released
  *

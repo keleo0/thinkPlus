@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_os.h: LOL OS Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-07	1.0 released
  *
@@ -89,16 +88,16 @@ extern "C" {
 #include <io.h>
 #include <winsock2.h>
 
-typedef char LOL_CHAR;
-typedef unsigned char LOL_UCHAR;
-typedef short LOL_SHORT;
-typedef unsigned short LOL_USHORT;
-typedef int LOL_INT;
-typedef unsigned int LOL_UINT;
-typedef __int64 LOL_LONG;
-typedef unsigned __int64 LOL_ULONG;
-typedef float LOL_FLOAT;
-typedef double LOL_DOUBLE;
+typedef char				LOL_CHAR;
+typedef unsigned char		LOL_UCHAR;
+typedef short				LOL_SHORT;
+typedef unsigned short		LOL_USHORT;
+typedef int					LOL_INT;
+typedef unsigned int		LOL_UINT;
+typedef __int64				LOL_LONG;
+typedef unsigned __int64	LOL_ULONG;
+typedef float				LOL_FLOAT;
+typedef double				LOL_DOUBLE;
 
 #define __func__ "__func__"
 #define snprintf _snprintf
@@ -122,6 +121,7 @@ typedef double LOL_DOUBLE;
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <signal.h>
+#include <errno.h>
 
 #include <strings.h>
 #include <unistd.h>
@@ -137,28 +137,52 @@ typedef double LOL_DOUBLE;
 #include <sys/sem.h>
 #include <sys/shm.h>
 
-typedef char LOL_CHAR;
-typedef unsigned char LOL_UCHAR;
-typedef short LOL_SHORT;
-typedef unsigned short LOL_USHORT;
-typedef int LOL_INT;
-typedef unsigned int LOL_UINT;
-typedef long long LOL_LONG;
-typedef unsigned long long LOL_ULONG;
-typedef float LOL_FLOAT;
-typedef double LOL_DOUBLE;
+typedef char				LOL_CHAR;
+typedef unsigned char		LOL_UCHAR;
+typedef short				LOL_SHORT;
+typedef unsigned short		LOL_USHORT;
+typedef int					LOL_INT;
+typedef unsigned int		LOL_UINT;
+typedef long long			LOL_LONG;
+typedef unsigned long long	LOL_ULONG;
+typedef float				LOL_FLOAT;
+typedef double				LOL_DOUBLE;
 
 #else	/* Unknown OS */
 #error Operation System not supported!
 #endif	/* __LOL_WINDOWS__ */
 
+/* export api */
+#if defined(__LOL_WINDOWS__)
+#if LOL_DLLEXPORT
+#define LOL_API __declspec(dllexport)
+#else
+#define LOL_API __declspec(dllimport)
+#endif
+#else
+#if LOL_DLLEXPORT
+#define LOL_API __attribute__((visibility("default")))
+#else
+#define LOL_API
+#endif
+#endif
+
+#ifdef __GNUC__
+#define LOL_DEPRECATED __attribute__((deprecated))
+#elif defined(_MSC_VER)
+#define LOL_DEPRECATED __declspec(deprecated)
+#else
+#define LOL_DEPRECATED
+#endif
+
+
 
 /* byte order */
 
 #if defined(__LOL_SPARC__) || defined(__LOL_AIX__) || defined(__LOL_HPUX__) || defined(__LOL_POWERPC__)
-#define __LOL_BIG_ENDIAN__
+#define __LOL_BIG_ENDIAN__ 1
 #else
-#define __LOL_LITTLE_ENDIAN__
+#define __LOL_LITTLE_ENDIAN__ 1
 #endif
 
 #ifdef __LOL_LITTLE_ENDIAN__

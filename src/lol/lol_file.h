@@ -2,7 +2,6 @@
  * lol_file.h: LOL File Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-07	1.0 released
  *
@@ -28,12 +27,13 @@ extern "C" {
 #define O_EXCL          _O_EXCL
 #define O_BINARY        _O_BINARY
 
-#define open _open
-#define read _read
-#define write _write
-#define lseek _lseek
-#define close _close
-#define access _access
+#define lolopen _open
+#define lolread _read
+#define lolwrite _write
+#define lollseek _lseeki64
+#define loltell _telli64
+#define lolclose _close
+#define lolaccess _access
 #else
 #define O_BINARY 0
 #endif	/* __LOL_WINDOWS__ */
@@ -58,10 +58,24 @@ typedef struct __lol_file LOL_FILE;
 #define LOL_FILE_SEEK_END	SEEK_END
 
 LOL_FILE *lol_fileopen(const char *pathname,int flags,int mode);
+int lol_fileclose(LOL_FILE *file);
+
 int lol_fileread(LOL_FILE *file,void *buffer,unsigned int nbytes);
 int lol_filewrite(LOL_FILE *file,const void *buffer,unsigned int nbytes);
-int lol_fileseek(LOL_FILE *file,int offset,int whence);
-int lol_fileclose(LOL_FILE *file);
+
+LOL_LONG lol_fileseek(LOL_FILE *file, LOL_LONG offset,int whence);
+LOL_LONG lol_filesize(LOL_FILE *file);
+
+int lol_access(const char* path, int accessmode);
+int lol_fileaccess(const char* filename, int accessmode);
+int lol_diraccess(const char* filename, int accessmode);
+
+int lol_remove(const char* path);
+int lol_rename(const char* oldname, const char* newname);
+int lol_move(const char* oldpath, const char* newpath);
+
+int lol_disk_free_size(const char* pDisk, LOL_LONG* free_size);
+int lol_disk_size(const char* pDisk, LOL_LONG* total_size);
 
 /* C++ */
 #ifdef __cplusplus

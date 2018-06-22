@@ -1,4 +1,4 @@
-#include "lol_error.h"
+﻿#include "lol_error.h"
 #include "lol_utility.h"
 
 #ifdef __LOL_WINDOWS__
@@ -896,7 +896,7 @@ int automkdir(const char *path,int mode)
 				strcpy(q,subdir);
 			else
 				sprintf(q,"/%s",subdir);
-			if(access(pdir,F_OK)==0)
+			if(lolaccess(pdir,F_OK)==0)
 				return 0;
 			if(lol_mkdir(pdir,mode)<0){
 				lol_error(0,"mkdir error![lol_errno=%d][path=%s]",lol_errno,pdir);
@@ -917,7 +917,7 @@ int automkdir(const char *path,int mode)
 		}
 		p+=pos+1;
 		dirlevel++;
-		if(access(pdir,F_OK)==0)
+		if(lolaccess(pdir,F_OK)==0)
 			continue;
 		if(lol_mkdir(pdir,mode)<0){
 			lol_error(0,"mkdir error![lol_errno=%d][path=%s]",lol_errno,pdir);

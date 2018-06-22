@@ -1,4 +1,4 @@
-/* -*- Mode: C; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*- */
+﻿/* -*- Mode: C; tab-width: 4; c-basic-offset: 4; indent-tabs-mode: nil -*- */
 /*
  * Hash table
  *
@@ -13,7 +13,7 @@
 #include <stdint.h>
 #include <string.h>
 
-#include "lol_os.h"
+#include "lol_hash.h"
 
 /*
  * Since the hash function does bit manipulation, it needs to know

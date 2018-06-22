@@ -1,8 +1,7 @@
-/*
+﻿/*
  * lol_netcenter.h: LOL NetCenter Interface
  * version: 1.0
  * OS: AIX,HP-UX,Solaris,FreeBSD,Linux,Mac OS X,Windows
- * author: luojian(enigma1983@qq.com)
  * history:
  * 2008-11-07	1.0 released
  *
@@ -19,12 +18,12 @@
 extern "C" {
 #endif
 
-#define LOL_NETCENTER_BUFSIZE	8192
+#define LOL_NETCENTER_BUFSIZE		8192
 
-#define LOL_NETCENTER_ACCEPT 			0x00000001	/* accept */
+#define LOL_NETCENTER_ACCEPT 		0x00000001	/* accept */
 #define LOL_NETCENTER_DISCONNECTED	0x00000002	/* disconnected */
 #define LOL_NETCENTER_ERROR			0x00000004	/* error */
-#define LOL_NETCENTER_DATARECVED		0x00000008	/* datarecved */
+#define LOL_NETCENTER_DATARECVED	0x00000008	/* datarecved */
 
 struct __lol_netcenter_buflist {
 	char *buf;

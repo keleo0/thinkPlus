@@ -1,4 +1,4 @@
-#include "lol_error.h"
+﻿#include "lol_error.h"
 #include "lol_utility.h"
 #include "lol_gl.h"
 #include "lol_log.h"

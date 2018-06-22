@@ -367,12 +367,12 @@ int automkdir(const char *path,int mode);
 #define O_EXCL          _O_EXCL
 #define O_BINARY        _O_BINARY
 
-#define open _open
-#define read _read
-#define write _write
-#define lseek _lseek
-#define close _close
-#define access _access
+#define lolopen _open
+#define lolread _read
+#define lolwrite _write
+#define lollseek _lseek
+#define lolclose _close
+#define lolaccess _access
 #else
 #define O_BINARY 0
 #endif	/* __LOL_WINDOWS__ */
