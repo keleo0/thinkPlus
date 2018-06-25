@@ -67,7 +67,8 @@ LOL_LONG lol_fileseek(LOL_FILE *file, LOL_LONG offset,int whence)
 {
 	LOL_LONG pos;
 
-	if((pos=lollseek(file->fd,offset,whence))<0){
+	if ((pos = lolseek(file->fd, offset, whence))<0)
+	{
 		lol_error(0,"[%s]:lseek failed.[%d:%s]",__func__,lol_errno,lol_strerror(lol_errno));
 		return -1;
 	}

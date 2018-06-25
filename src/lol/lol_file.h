@@ -27,13 +27,18 @@ extern "C" {
 #define O_EXCL          _O_EXCL
 #define O_BINARY        _O_BINARY
 
-#define lolopen _open
-#define lolread _read
-#define lolwrite _write
-#define lollseek _lseeki64
-#define loltell _telli64
-#define lolclose _close
-#define lolaccess _access
+#define lolopen		open
+#define lolread		read
+#define lolwrite	write
+#ifdef __LOL_WINDOWS__ /* Windows */
+#define lolseek		_lseeki64
+#define loltell		_telli64
+#else /* UNIX */
+#define lolseek		lseek64
+#define loltell		ftello
+#endif
+#define lolclose	close
+#define lolaccess	access
 #else
 #define O_BINARY 0
 #endif	/* __LOL_WINDOWS__ */
